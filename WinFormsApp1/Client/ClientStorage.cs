@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Linq;
 
 namespace WinFormsApp1.Client
 {
@@ -32,6 +33,11 @@ namespace WinFormsApp1.Client
         public void Ban(ClientModel client)
         {
             Clients.Remove(client);
+        }
+
+        internal ClientModel Find(string text)
+        {
+            return Clients.Where(e => e.Phone == text).SingleOrDefault();
         }
     }
 }

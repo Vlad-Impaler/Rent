@@ -30,7 +30,6 @@ namespace WinFormsApp1
 
         private void Sign_Button_Click(object sender, EventArgs e) //вход за клиента
         {
-            
             if (S_Name.Text != "" && F_Name.Text != "" && T_Name.Text != "" && Date_Birth.Text != "" && Phone.Text != "")
             {
                 client = new ClientModel()
@@ -50,6 +49,17 @@ namespace WinFormsApp1
             else
             {
                 label6.Text = "Заполните поля";
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (Phone.Text != "")
+            {
+                client = storage.Find(Phone.Text);
+                Client_Interface F = new Client_Interface();
+                F.Show();
+                Hide();
             }
         }
     }
