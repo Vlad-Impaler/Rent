@@ -114,6 +114,7 @@ namespace WinFormsApp1
             this.stBox.TabIndex = 19;
             this.stBox.Text = "Статус";
             this.stBox.UseVisualStyleBackColor = true;
+            this.stBox.CheckedChanged += new System.EventHandler(this.stBox_CheckedChanged);
             // 
             // label3
             // 

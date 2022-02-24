@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace WinFormsApp1
@@ -32,6 +33,12 @@ namespace WinFormsApp1
         public void Remove(FlatModel flat)
         {
             Flats.Remove(flat);
+        }
+
+        public void Accept(string text)
+        {
+            var flat = Flats.Where(e => e.Adres == text).SingleOrDefault();
+            flat.Chk = false;
         }
     }
 }

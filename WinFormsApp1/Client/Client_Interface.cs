@@ -88,5 +88,10 @@ namespace WinFormsApp1
             Contract F = new Contract();
             F.Show();
         }
+
+        private void stBox_CheckedChanged(object sender, EventArgs e)
+        {
+            Check();
+        }
     }
 }
